@@ -8,3 +8,7 @@ export function setupRoutes(app: Application): void {
   app.use('/api/health', healthHandler)
   app.use(history())
 }
+import batchRoutes from "./routes/batch";
+
+app.use("/api/v1/tts", ttsRoutes);
+app.use("/api/v1/tts", batchRoutes);
